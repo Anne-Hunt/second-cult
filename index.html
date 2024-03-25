@@ -12,7 +12,7 @@
 </head>
 
 <body class="bg-dark p-2">
-    <main class="container-fluid border border-info border-5">
+    <main class="container-fluid border border-info border-5"><span id="total-sheep"></span>
         <!-- Main body-->
         <section class="row">
             <div class="col-12 text-light text-center">
@@ -54,26 +54,27 @@
                     <div class="row">
                         <div class="col-6">
                             <div class="p-2">
-                                <button class="btn btn-dark shadow text-light" onclick="addUpgrades('shears')"><span
-                                        id="shearsBtn"></span></button><span id="shearsDesc" class="p-1 fsmall"></span>
+                                <button class="btn btn-info shadow text-light"
+                                    onclick="addUpgrade('sheep shears')"><span id="shearsBtn"></span></button><span
+                                    id="shearsDesc" class="p-1 fsmall"></span>
                             </div>
                             <div class="p-2">
-                                <button class="btn btn-dark shadow text-light"
-                                    onclick="addUpgrades('electric trimmer')"><span
+                                <button class="btn btn-info shadow text-light"
+                                    onclick="addUpgrade('electric trimmer')"><span
                                         id="electricTrimmerBtn"></span></button><span id="electricTrimmerDesc"
                                     class="p-1 fsmall"></span>
                             </div>
                         </div>
                         <div class="col-6">
                             <div class="p-2">
-                                <button class="btn btn-dark shadow text-light"
-                                    onclick="addUpgrades('mobile grooomer')"><span
+                                <button class="btn btn-info shadow text-light"
+                                    onclick="addUpgrade('mobile grooomer')"><span
                                         id="mobileGroomerBtn"></span></button><span id="mobileGroomerDesc"
                                     class="p-1 fsmall"></span>
                             </div>
                             <div class="p-2">
-                                <button class="btn btn-dark shadow text-light"
-                                    onclick="addUpgrades('grooming barn')"><span
+                                <button class="btn btn-info shadow text-light"
+                                    onclick="addUpgrade('grooming barn')"><span
                                         id="groomingBarnBtn"></span></button><span id="groomingBarnDesc"
                                     class="p-1 fsmall"></span>
                             </div>
@@ -118,6 +119,6 @@
 <span class="mdi mdi-content-cut"></span>
 <span class="mdi mdi-barn"></span>
 <span class="mdi mdi-truck"></span>
-<span class="mdi mdi-mustache"></span>
-<span class="mdi mdi-lightning-bolt"></span>
+<span class="mdi mdi-lightning-bolt"></span><span class="mdi mdi-mustache"></span>
 <span class="mdi mdi-volleyball"></span>
+<span class="mdi mdi-sheep"></span>
