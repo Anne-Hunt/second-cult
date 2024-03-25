@@ -19,7 +19,7 @@ let upgrades = [
         name: 'mobile groomer',
         power: 5,
         count: 0,
-        cost: 10
+        cost: 100
     },
     {
         id: 'barn',
@@ -45,6 +45,7 @@ function addSheep() {
 
 function addUpgrade(upgradeName) {
     let improvement = upgrades.find(upgrade => upgrade.name == upgradeName)
+    debugger
     if (sheep >= improvement.cost) {
         sheep -= improvement.cost
         improvement.count++
@@ -62,12 +63,29 @@ function addUpgrade(upgradeName) {
     drawHTML()
 }
 
-
-function addGroomer() {
-    addUpgrade('mobile groomer')
+function intervals(inputFunction) {
+    if (inputFunction == 'addGroomer') {
+        setInterval(addGroomer, clock)
+        drawHTML()
+    } else if (inputFunction == 'addBarn') {
+        setInterval(addBarn, 5000)
+        drawHTML()
+    }
 }
 
-setInterval(addGroomer, 3000)
+function addGroomer() {
+    sheep += upgrades[2].power
+    sheep -= upgrades[2].cost
+    upgrades[2].count++
+    intervals('addGroomer')
+}
+
+function addBarn() {
+    sheep += upgrades[3].power
+    sheep -= upgrades[3].cost
+    upgrades[3].count++
+    intervals('addBarn')
+}
 
 function drawHTML() {
     let shearsElem = document.getElementById('shears')
